@@ -1,6 +1,7 @@
 package uk.ac.westminster.products_api;
 
 public class Product {
+    // Tutorial 2: removing getName() made "name" disappear from the JSON, with no error
     private Long id;
     private String name;
     private double price;
