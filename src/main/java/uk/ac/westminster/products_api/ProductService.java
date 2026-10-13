@@ -27,7 +27,14 @@ public class ProductService {
         products.add(product);
         return product;
     }
+
     public void deleteProduct(Long id) {
         products.removeIf(p -> p.getId().equals(id));
+    }
+
+    public List<Product> findByName(String name) {
+        return products.stream()
+                .filter(p -> p.getName().contains(name))
+                .toList();
     }
 }
